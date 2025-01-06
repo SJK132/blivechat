@@ -252,7 +252,7 @@ export default class ChatClientDirectOpenLive extends ChatClientOfficialBase {
       content: data.msg,
       privilegeType: data.guard_level,
       isGiftDanmaku: chat.isGiftDanmakuByContent(data.msg),
-      medalLevel: data.fans_medal_wearing_status ? data.fans_medal_level : 0,
+      medalLevel: data.fans_medal_level,
       id: data.msg_id,
       emoticon: emoticon,
     })
