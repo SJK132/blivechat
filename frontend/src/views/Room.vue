@@ -274,9 +274,11 @@ export default {
         time: new Date(data.timestamp * 1000),
         authorName: data.authorName,
         authorType: data.authorType,
+        medalLevel: data.medalLevel,
         content: data.content,
         richContent: richContent,
         privilegeType: data.privilegeType,
+
         repeated: 1,
         translation: data.translation
       }

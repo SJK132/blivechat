@@ -7,6 +7,7 @@
       <!-- 这里是已验证勋章 -->
       <span id="chip-badges" class="style-scope yt-live-chat-author-chip"></span>
     </span>
+    <span id="medal-level" class="style-scope yt-live-chat-author-chip">{{ medalLevel || '' }}</span>
     <span id="chat-badges" class="style-scope yt-live-chat-author-chip">
       <author-badge v-if="isInMemberMessage" class="style-scope yt-live-chat-author-chip"
         :isAdmin="false" :privilegeType="privilegeType"
@@ -36,7 +37,8 @@ export default {
     isInMemberMessage: Boolean,
     authorName: String,
     authorType: Number,
-    privilegeType: Number
+    privilegeType: Number,
+    medalLevel: Number
   },
   data() {
     return {

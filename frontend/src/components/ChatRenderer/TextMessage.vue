@@ -6,7 +6,7 @@
     <div id="content" class="style-scope yt-live-chat-text-message-renderer">
       <span id="timestamp" class="style-scope yt-live-chat-text-message-renderer">{{ timeText }}</span>
       <author-chip class="style-scope yt-live-chat-text-message-renderer"
-        :isInMemberMessage="false" :authorName="authorName" :authorType="authorType" :privilegeType="privilegeType"
+        :isInMemberMessage="false" :authorName="authorName" :authorType="authorType" :privilegeType="privilegeType" :medalLevel="medalLevel"
       ></author-chip>
       <span id="message" class="style-scope yt-live-chat-text-message-renderer">
         <template v-for="(content, index) in richContent">
@@ -50,6 +50,7 @@ export default {
     authorType: Number,
     richContent: Array,
     privilegeType: Number,
+    medalLevel: Number,
     repeated: Number
   },
   data() {

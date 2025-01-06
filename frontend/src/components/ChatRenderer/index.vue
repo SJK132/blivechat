@@ -16,6 +16,7 @@
                 :avatarUrl="message.avatarUrl"
                 :authorName="message.authorName"
                 :authorType="message.authorType"
+                :medalLevel="message.medalLevel"
                 :privilegeType="message.privilegeType"
                 :richContent="getShowRichContent(message)"
                 :repeated="message.repeated"
