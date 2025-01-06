@@ -44,4 +44,4 @@ COPY --from=builder "${BASE_PATH}/frontend/dist" "${EXT_DATA_PATH}/frontend/dist
 VOLUME "${EXT_DATA_PATH}"
 EXPOSE 12450
 ENTRYPOINT ["python3", "main.py"]
-CMD ["--host", "0.0.0.0", "--port", "12333"]
+CMD ["--host", "0.0.0.0", "--port", "12450"]
