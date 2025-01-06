@@ -78,6 +78,7 @@ export default class ChatClientDirectWeb extends ChatClientOfficialBase {
 
     let roomId, medalLevel
     if (info[3]) {
+      roomId = info[3][3]
       medalLevel = info[3][0]
     } else {
       roomId = medalLevel = 0
