@@ -76,11 +76,11 @@ export default class ChatClientDirectWeb extends ChatClientOfficialBase {
       avatarUrl = await chat.getAvatarUrl(uid, authorName)
     }
 
-    let medalLevel
+    let roomId, medalLevel
     if (info[3]) {
       medalLevel = info[3][0]
     } else {
-      medalLevel = 0
+      roomId = medalLevel = 0
     }
 
     let uid = info[2][0]
@@ -110,7 +110,7 @@ export default class ChatClientDirectWeb extends ChatClientOfficialBase {
       authorLevel: info[4][0],
       isNewbie: info[2][5] < 10000,
       isMobileVerified: Boolean(info[2][6]),
-      medalLevel: medalLevel,
+      medalLevel: roomId === this.roomId ? medalLevel : 0,
       emoticon: info[0][13].url || null,
     })
     this.msgHandler.onAddText(data)
